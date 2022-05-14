@@ -1,7 +1,7 @@
 let display = [];
 let sizeList = [];
-var selectedColor = null;
-var selectedSize = null;
+let selectedColor = null;
+let selectedSize = null;
 
 var getJSON = function(url, callback) {
     var xmlhttprequest = new XMLHttpRequest();
@@ -23,7 +23,7 @@ function start(){
         if (err != null) {
             console.error(err);
         } else {
-            display = new Array();
+            display = [];
             for(i=0; i<data.product.variants.length; i++){
                 display.push(data.product.variants[i])
             }
@@ -31,15 +31,12 @@ function start(){
             document.getElementById('description').innerHTML = data.product.description;
         }
     });
-    changeColor('green');
+    document.getElementById('image').innerHTML = "<img src='static/images_asset/shoes-white.png' alt='white-shoes'>";
 }
 
 function changeImage(color){
-    for(i=0; i<display.length; i++) {
-        if(display[i].color === color)
-            document.getElementById('image').innerHTML = "<img src='"+display[i].image+"' alt='"+color+" shoes'>";
-    }
-    document.getElementById('image').innerHTML = "<img src=\"static/images_asset/shoes-"+selectedColor+".png\" alt="+selectedColor+"-shoes\">";
+    selectedColor = color;
+    document.getElementById('image').innerHTML = "<img src='static/images_asset/shoes-"+selectedColor+".png' alt='"+selectedColor+"-shoes'>";
 }
 
 function changeColor(color) {

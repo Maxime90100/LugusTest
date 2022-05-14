@@ -1,0 +1,115 @@
+body {
+    font-family: Poppins;
+}
+#title{
+	font-weight: bold;
+}
+.container{
+	min-height: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.row{
+	text-align: center;
+}
+.btn{
+	width: 300px;
+	border-radius: 20px;
+}
+
+img {
+	max-width:90%;
+	max-height:90%;
+}
+
+#selectColor{
+	margin-left: -20px;
+}
+#selectColor>input{
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+#selectColor>input[type='radio']:after {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	top: -3px;
+	left: -3px;
+	position: relative;
+	background-color: black;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid white;
+}
+
+#selectColor>input[type='radio']:checked:after {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	top: -3px;
+	left: -3px;
+	position: relative;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 3px solid black;
+}
+
+#selectColor>input[type='radio'].green:after{background-color: #7EC692;}
+#selectColor>input[type='radio'].blue:after{background-color: #71B0E0;}
+#selectColor>input[type='radio'].yellow:after{background-color: #EBE58B;}
+#selectColor>input[type='radio'].red:after{background-color: #E65F5F;}
+
+#selectSize{
+	margin-left: -60px;
+}
+#selectSize>input{
+	margin-left: 60px;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#selectSize>input[type='radio']:after {
+	width: 60px;
+	height: 30px;
+	top: -3px;
+	left: -3px;
+	border-radius: 10px;
+	position: relative;
+	background-color: white;
+	color: black;
+	display: inline-block;
+	visibility: visible;
+	border: 3px solid black;
+}
+
+#selectSize>input[type='radio']:checked:after {
+	width: 60px;
+	height: 30px;
+	top: -3px;
+	left: -3px;
+	border-radius: 10px;
+	position: relative;
+	background-color: black;
+	color: white;
+	display: inline-block;
+	visibility: visible;
+	border: 3px solid black;
+}
+#selectSize>input[type='radio'].unavailable:checked:after {
+	background-color: #BDBDBD;
+}
+
+#selectSize>input[type='radio'].size42:after{content: '42';}
+#selectSize>input[type='radio'].size43:after{content: '43';}
+#selectSize>input[type='radio'].size44:after{content: '44';}
+#selectSize>input[type='radio'].size45:after{content: '45';}
+#selectSize>input[type='radio'].size46:after{content: '46';}
+
+#selectSize>input[type='radio'].unavailable:after{border: 1px solid grey; color: grey; font-size: small;}
+#selectSize>input[type='radio'].available:after{font-size: large; font-weight: bold}
+

@@ -44,6 +44,10 @@ img {
 	visibility: visible;
 	border: 2px solid white;
 }
+#selectColor>input[type='radio'].green:after{background-color: #7EC692;}
+#selectColor>input[type='radio'].blue:after{background-color: #71B0E0;}
+#selectColor>input[type='radio'].yellow:after{background-color: #EBE58B;}
+#selectColor>input[type='radio'].red:after{background-color: #E65F5F;}
 
 #selectColor>input[type='radio']:checked:after {
 	width: 30px;
@@ -55,13 +59,12 @@ img {
 	content: '';
 	display: inline-block;
 	visibility: visible;
-	border: 3px solid black;
+	background-color: white;
 }
-
-#selectColor>input[type='radio'].green:after{background-color: #7EC692;}
-#selectColor>input[type='radio'].blue:after{background-color: #71B0E0;}
-#selectColor>input[type='radio'].yellow:after{background-color: #EBE58B;}
-#selectColor>input[type='radio'].red:after{background-color: #E65F5F;}
+#selectColor>input[type='radio'].green:checked:after{border: 10px solid #7EC692;}
+#selectColor>input[type='radio'].blue:checked:after{border: 10px solid #71B0E0;}
+#selectColor>input[type='radio'].yellow:checked:after{border: 10px solid #EBE58B;}
+#selectColor>input[type='radio'].red:checked:after{border: 10px solid #E65F5F;}
 
 #selectSize{
 	margin-left: -60px;
@@ -78,7 +81,7 @@ img {
 	height: 30px;
 	top: -3px;
 	left: -3px;
-	border-radius: 10px;
+	border-radius: 5px;
 	position: relative;
 	background-color: white;
 	color: black;
@@ -92,7 +95,7 @@ img {
 	height: 30px;
 	top: -3px;
 	left: -3px;
-	border-radius: 10px;
+	border-radius: 5px;
 	position: relative;
 	background-color: black;
 	color: white;
@@ -110,6 +113,6 @@ img {
 #selectSize>input[type='radio'].size45:after{content: '45';}
 #selectSize>input[type='radio'].size46:after{content: '46';}
 
-#selectSize>input[type='radio'].unavailable:after{border: 1px solid grey; color: grey; font-size: small;}
+#selectSize>input[type='radio'].unavailable:after{border: 1px solid grey; color: grey;}
 #selectSize>input[type='radio'].available:after{font-size: large; font-weight: bold}
 
